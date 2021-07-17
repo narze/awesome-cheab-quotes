@@ -6,7 +6,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "twind": "^0.16.16",
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4",
     "vue": "^3.0.5"
   },
   "devDependencies": {
