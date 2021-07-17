@@ -18,7 +18,8 @@ export default defineComponent({
   setup: () => {
     const count = ref(0)
     const entries = ref<Entry[]>([])
-    const entry = ref<Entry>({} as Entry)
+    const result = ref("")
+    const resultTags = ref<string[]>([])
 
     const getEntries = async () => {
       const response = await fetch(
@@ -38,38 +39,51 @@ export default defineComponent({
 
           return { tags, body, id: idx + 1 }
         })
-
-      entry.value = entries.value[~~(Math.random() * entries.value.length)]
     }
 
-    return { count, entries, getEntries, entry }
+    const randomEntry = () => {
+      const index = ~~(Math.random() * entries.value.length)
+
+      result.value = entries.value[index].body
+      resultTags.value = entries.value[index].tags
+    }
+
+    return { count, entries, getEntries, randomEntry, result, resultTags }
   },
-  mounted() {
-    this.getEntries()
+  async mounted() {
+    await this.getEntries()
+    this.randomEntry()
   },
 })
 </script>
 
 <template>
-  <h1 class="text-6xl">คำคมเฉียบๆ</h1>
-  <!-- <p>{{ entries[0] }}</p> -->
-  <p>{{ entry }}</p>
+  <main class="min-h-screen h-screen w-screen m-0 p-20">
+    <section class="flex flex-col justify-center items-center flex-grow h-full">
+      <h1 class="text-6xl">คำคมเฉียบๆ</h1>
+
+      <p class="mt-8 text-3xl">
+        {{ result }}
+      </p>
+      <p class="text-lg">{{ resultTags.map((t) => `#${t}`).join(", ") }}</p>
+
+      <button
+        v-on:click="randomEntry()"
+        class="
+          text-2xl
+          mt-8
+          bg-green-400
+          px-2
+          py-1
+          rounded
+          border border-green-700
+          hover:bg-green-600 hover:border-green-900
+        "
+      >
+        สุ่มใหม่
+      </button>
+    </section>
+  </main>
 </template>
 
-<style scoped>
-a {
-  color: #42b983;
-}
-
-label {
-  margin: 0 0.5em;
-  font-weight: bold;
-}
-
-code {
-  background-color: #eee;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #304455;
-}
-</style>
+<style scoped></style>
