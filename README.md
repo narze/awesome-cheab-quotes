@@ -47,3 +47,4 @@ Format : `- QUOTE [TAGS]`
 - You are the semicolon to my statements. [code]
 - ถ้าผ่านวันนี้ไปได้ แปลว่ามีวันพรุ่งนี้ [academic]
 - ถ้าอยากได้รักแท้ แค่ต้องไปซื้อที่ปากคลอง [love]
+- ถนนประดิษฐ์มนูธรรม แต่ผมประดิษฐ์มนูญชัย [academic, manoonchai]
