@@ -89,8 +89,8 @@ export default defineComponent({
       class="fixed top-10 left-10 text-white"
       href="https://github.com/narze/awesome-cheab-quotes"
       target="_blank"
-      >github</a
-    >
+      >github
+    </a>
     <section class="flex flex-col justify-center items-center flex-grow h-full">
       <h1 class="text-5xl textWeight-500 text-white">คำคมเฉียบๆ</h1>
       <p class="mt-8 text-2xl textWeight-400 text-white text-opacity-90">
@@ -100,7 +100,8 @@ export default defineComponent({
         <button
           type="button"
           class="
-            text-white text-opacity-90
+            text-white
+            text-opacity-90
             textWeight-400
             text-xs
             mt-4
