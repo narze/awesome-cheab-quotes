@@ -84,25 +84,29 @@ export default defineComponent({
 </script>
 
 <template>
+  <main class="min-h-screen h-screen w-screen m-0 p-8 bg-gray-800">
     <a class="fixed top-10 left-10 text-white" href="https://github.com/narze/awesome-cheab-quotes" target="_blank">github</a>
     <section class="flex flex-col justify-center items-center flex-grow h-full">
-      <h1 class="text-6xl">คำคมเฉียบๆ</h1>
-
-      <p class="mt-8 text-3xl">
+      <h1 class="text-5xl textWeight-500 text-white">คำคมเฉียบๆ</h1>
+      <p class="mt-8 text-2xl textWeight-400 text-white text-opacity-90">
         {{ result }}
       </p>
       <div class="flex flex-row justify-center gap-1">
         <button
           type="button"
           class="
+            text-white
+            text-opacity-90
+            textWeight-400
             text-xs
             mt-4
             px-1
             py-0.5
             rounded
             border border-green-700
-            hover:bg-green-600 hover:border-green-900 hover:text-white
+            hover:bg-green-500 hover:border-green-500 hover:text-gray-800
           "
+          v-bind:key="idx"
           v-for="(resultTag, idx) in resultTags"
           :title="`ค้นหาคำคม ${resultTag}`"
           @click="randomEntryByTag(resultTag)"
@@ -110,18 +114,18 @@ export default defineComponent({
           {{ `#${resultTag}` }}
         </button>
       </div>
-
       <button
         v-on:click="randomEntry()"
         class="
-          text-2xl
+          btnCustom
+          text-lg
           mt-4
           bg-green-400
-          px-2
+          px-3
           py-1
           rounded
-          border border-green-700
-          hover:bg-green-600 hover:border-green-900
+          border border-green-500
+          hover:bg-green-500 hover:border-green-600
         "
       >
         สุ่มใหม่
@@ -129,3 +133,13 @@ export default defineComponent({
     </section>
   </main>
 </template>
+
+<style>
+.textWeight-400 {
+  font-weight: 400;
+}
+.textWeight-500 {
+  font-weight: 500;
+}
+
+</style>
