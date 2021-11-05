@@ -128,7 +128,7 @@ export default defineComponent({
           hover:bg-green-500 hover:border-green-600
         "
       >
-        สุ่มใหม่
+        สุ่มใหม่
       </button>
     </section>
   </main>
