@@ -84,7 +84,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <main class="min-h-screen h-screen w-screen m-0 p-20">
+    <a class="fixed top-10 left-10 text-white" href="https://github.com/narze/awesome-cheab-quotes" target="_blank">github</a>
     <section class="flex flex-col justify-center items-center flex-grow h-full">
       <h1 class="text-6xl">คำคมเฉียบๆ</h1>
 
