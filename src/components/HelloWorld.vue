@@ -85,7 +85,12 @@ export default defineComponent({
 
 <template>
   <main class="min-h-screen h-screen w-screen m-0 p-8 bg-gray-800">
-    <a class="fixed top-10 left-10 text-white" href="https://github.com/narze/awesome-cheab-quotes" target="_blank">github</a>
+    <a
+      class="fixed top-10 left-10 text-white"
+      href="https://github.com/narze/awesome-cheab-quotes"
+      target="_blank"
+      >github
+    </a>
     <section class="flex flex-col justify-center items-center flex-grow h-full">
       <h1 class="text-5xl textWeight-500 text-white">คำคมเฉียบๆ</h1>
       <p class="mt-8 text-2xl textWeight-400 text-white text-opacity-90">
@@ -128,7 +133,7 @@ export default defineComponent({
           hover:bg-green-500 hover:border-green-600
         "
       >
-        สุ่มใหม่
+        สุ่มใหม่
       </button>
     </section>
   </main>
@@ -141,5 +146,4 @@ export default defineComponent({
 .textWeight-500 {
   font-weight: 500;
 }
-
 </style>
