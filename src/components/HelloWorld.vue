@@ -38,7 +38,7 @@ export default defineComponent({
         .filter((line) => line.startsWith("- "))
         .map((l) => l.slice(2))
         .map((l, idx) => {
-          const tagsTmp = l.match(/(\[(\w+(,\s)?)+\])/g);
+          const tagsTmp = l.match(/(\[(\w+(,\s)?)|(\w+( \s)?)+\])/g);
           const body = l.replace(/(\[(\w+(,\s)?)+\])/g, "").trimEnd();
           const tags = tagsTmp![0].slice(1, -1).split(/,\s?/);
 
