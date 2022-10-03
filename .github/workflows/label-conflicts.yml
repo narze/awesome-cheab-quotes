@@ -4,7 +4,7 @@ on:
       - main
 
 jobs:
-  label-conflicts:
+  create-labels:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,7 +14,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           prune: false
-          
+  
+  label-conflicts:
+    runs-on: ubuntu-latest
+    needs: create-labels
+    steps:
       - uses: mschilde/auto-label-merge-conflicts@master
         with:
           CONFLICT_LABEL_NAME: "has conflicts"
