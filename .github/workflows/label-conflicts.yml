@@ -13,8 +13,8 @@ jobs:
           file: 'labels.yml'
           content: |
             - name: has conflicts
-            description: This pull request has merge conflicts
-            color: cfd3d7
+              description: This pull request has merge conflicts
+              color: cfd3d7
 
 
       - uses: micnncim/action-label-syncer@v1
