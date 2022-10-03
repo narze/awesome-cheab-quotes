@@ -7,11 +7,16 @@ jobs:
   create-labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: "finnp/create-file-action@master"
-        env:
-          FILE_NAME: ".github/labels.yml"
-          FILE_BASE64: "LSBuYW1lOiBoYXMgY29uZmxpY3RzCiAgZGVzY3JpcHRpb246IFRoaXMgcHVsbCByZXF1ZXN0IGhhcyBtZXJnZSBjb25mbGljdHMKICBjb2xvcjogY2ZkM2Q3Cg=="
-      
+      - uses: 1arp/create-a-file-action@0.2
+        with:
+          path: '.github'
+          file: 'labels.yml'
+          content: |
+            - name: has conflicts
+            description: This pull request has merge conflicts
+            color: cfd3d7
+
+
       - uses: micnncim/action-label-syncer@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
