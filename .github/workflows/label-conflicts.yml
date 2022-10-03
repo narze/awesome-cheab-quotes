@@ -7,7 +7,10 @@ jobs:
   create-labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: "finnp/create-file-action@master"
+        env:
+          FILE_NAME: ".github/labels.yml"
+          FILE_BASE64: "LSBuYW1lOiBoYXMgY29uZmxpY3RzCiAgZGVzY3JpcHRpb246IFRoaXMgcHVsbCByZXF1ZXN0IGhhcyBtZXJnZSBjb25mbGljdHMKICBjb2xvcjogY2ZkM2Q3Cg=="
       
       - uses: micnncim/action-label-syncer@v1
         env:
