@@ -73,3 +73,4 @@ Format : `- QUOTE [TAGS]`
 - เขียน code ยังไงก็ bug แต่ถ้าเธอรักอีกซัก bug ก็ยอม... [love]
 - เธอๆ แถวนี้มีตู้เย็นไหม? เจอเธอแล้วใจละลาย... [love]
 - มันเดย์อะวันจันทร์ ส่วนมะยันอ่ะภันเต ขอบคุณครับ [academic]
+- If you get tried, learn to rest not to quit [academic]
