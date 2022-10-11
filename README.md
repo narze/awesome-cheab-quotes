@@ -74,3 +74,4 @@ Format : `- QUOTE [TAGS]`
 - เธอๆ แถวนี้มีตู้เย็นไหม? เจอเธอแล้วใจละลาย... [love]
 - มันเดย์อะวันจันทร์ ส่วนมะยันอ่ะภันเต ขอบคุณครับ [academic]
 - If you get tired, learn to rest not to quit. [academic]
+- ทำไมเราต้องรอเอาความสำเร็จไปตบหน้าคนดูถูกเรา ทั้งๆทีจริงๆแล้วมือเรา ก็ตบได้เลย [Singto Numchok, naughty]
