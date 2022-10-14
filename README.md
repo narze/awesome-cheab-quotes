@@ -77,3 +77,4 @@ Format : `- QUOTE [TAGS]`
 - If you get tired, learn to rest not to quit. [academic]
 - ทำไมเราต้องรอเอาความสำเร็จไปตบหน้าคนดูถูกเรา ทั้งๆทีจริงๆแล้วมือเรา ก็ตบได้เลย [Singto Numchok, naughty]
 - ระยะทางพิสูจน์ม้า รอยตีนกาพิสูจน์วัย [life]
+- ไข่เวลาทอดในกระทะร้อนๆ มันจะดัง "สู้สู้" นะ [life]
