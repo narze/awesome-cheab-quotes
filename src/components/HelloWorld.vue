@@ -1,5 +1,5 @@
 <script lang="ts">
-import { ref, reactive, defineComponent } from "vue";
+import { defineComponent, reactive, ref } from "vue";
 
 interface Entry {
   body: string;
@@ -37,8 +37,10 @@ export default defineComponent({
       );
 
       const readme = await response.text();
+      const skipIndex = readme.indexOf("## คำคมเฉียบๆ")
 
       entries.value = readme
+        .slice(skipIndex)
         .split("\n")
         .filter((line) => line.startsWith("- "))
         .map((l) => l.slice(2))
